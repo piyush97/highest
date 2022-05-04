@@ -17,3 +17,12 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getServerSideProps = async () => {
+  const query = `[_type == "post"] | order(date desc) {
+    title,
+    date,
+    _id,
+    slug,
+  ]`
+}
