@@ -23,13 +23,13 @@ const Home: NextPage = ({ posts }: Props) => {
         {/* Posts */}
         {posts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
-            {/* Image */}
-            <div>
-              {' '}
-              <div className="flex justify-between p-5 bg-white">
+            <div className="overflow-hidden border rounded-lg cursor-pointer group">
+              {/* Image */}
+              {/* <img src={urlFor(post.mainImage).url()} alt={post.title} /> */}
+              <div className="flex justify-between p-5 transition-transform duration-200 ease-in-out bg-white group-hover:scale-105">
                 <div>
-                  <p>{post.title}</p>
-                  <p>
+                  <p className="text-lg font-bold">{post.title}</p>
+                  <p className="text-xs">
                     {post.description} by {post.author.name}
                   </p>
                 </div>
