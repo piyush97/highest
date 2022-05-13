@@ -75,7 +75,10 @@ const Post = ({ post }: Props) => {
       </article>
       <hr className="max-w-lg mx-auto my-5 border border-yellow-500" />
 
-      <form className="flex flex-col max-w-2xl p-5 mx-auto mb-10">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col max-w-2xl p-5 mx-auto mb-10"
+      >
         <h3 className="text-sm text-yellow-500">Enjoyed this article?</h3>
         <h3 className="text-3xl font-bold">Leave a comment below</h3>
         <hr className="py-3 mt-2" />
@@ -87,7 +90,7 @@ const Post = ({ post }: Props) => {
             {...register('name', { required: true })}
             className="block w-full px-3 py-2 mt-1 border rounded shadow outline-none form-input ring-yellow-500 focus:ring"
             type="text"
-            placeholder="Piyush"
+            placeholder="Piyush Mehta"
           />
         </label>
         <label className="block mb-5 ">
@@ -95,8 +98,8 @@ const Post = ({ post }: Props) => {
           <input
             {...register('email', { required: true })}
             className="block w-full px-3 py-2 mt-1 border rounded shadow outline-none form-input ring-yellow-500 focus:ring"
-            type="text"
-            placeholder="Piyush"
+            type="email"
+            placeholder="me@piyushmehta.com"
           />
         </label>
         <label className="block mb-5 ">
@@ -105,7 +108,7 @@ const Post = ({ post }: Props) => {
             {...register('comment', { required: true })}
             className="block w-full px-3 py-2 mt-1 border rounded shadow outline-none form-input ring-yellow-500 focus:ring"
             rows={8}
-            placeholder="Piyush"
+            placeholder="This is awesome! 🔥"
           />
         </label>
         <div>
