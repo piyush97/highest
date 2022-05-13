@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
 import Header from '../../components/Header'
-import { sanityClient } from '../../sanity'
+import { sanityClient, urlFor } from '../../sanity'
 import { Post } from '../../typings'
 
 interface Props {
@@ -12,6 +12,11 @@ const Post = ({ post }: Props) => {
   return (
     <main>
       <Header />
+      <img
+        className="object-cover w-full h-40"
+        src={urlFor(post.mainImage).url()}
+        alt={post.title}
+      />
     </main>
   )
 }
