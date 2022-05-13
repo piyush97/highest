@@ -29,8 +29,9 @@ const Post = ({ post }: Props) => {
             alt={post.author.name}
           />
           <p className="text-sm text-gray-500 font-extralight">
-            Blog post by {post.author.name} - Published at{' '}
-            {new Date(post._createdAt).toLocaleString()}
+            Blog post by{' '}
+            <span className="text-green-600">{post.author.name}</span> -
+            Published at {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
       </article>
