@@ -19,13 +19,13 @@ const Home: NextPage = ({ posts }: Props) => {
       </Head>
       <Header />
       <Hero />
-      <div>
+      <div className="grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:p-6">
+        {/* Posts */}
         {posts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             {/* Image */}
             <div>
               {' '}
-              {JSON.stringify(post, null, 2)}
               <div className="flex justify-between p-5 bg-white">
                 <div>
                   <p>{post.title}</p>
