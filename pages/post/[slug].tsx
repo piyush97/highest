@@ -59,6 +59,38 @@ const Post = ({ post }: Props) => {
           />
         </div>
       </article>
+      <hr className="max-w-lg mx-auto my-5 border border-yellow-500" />
+
+      <form className="flex flex-col max-w-2xl p-5 mx-auto mb-10">
+        <h3 className="text-sm text-yellow-500">Enjoyed this article?</h3>
+        <h3 className="text-3xl font-bold">Leave a comment below</h3>
+        <hr className="py-3 mt-2" />
+
+        <label className="block mb-5 ">
+          <span className="text-gray-700 ">Name</span>
+          <input
+            className="block w-full px-3 py-2 mt-1 border rounded shadow form-input ring-yellow-500"
+            type="text"
+            placeholder="Piyush"
+          />
+        </label>
+        <label className="block mb-5 ">
+          <span className="text-gray-700 ">Email</span>
+          <input
+            className="block w-full px-3 py-2 mt-1 border rounded shadow form-input ring-yellow-500"
+            type="text"
+            placeholder="Piyush"
+          />
+        </label>
+        <label className="block mb-5 ">
+          <span className="text-gray-700 ">Comment</span>
+          <textarea
+            className="block w-full px-3 py-2 mt-1 border rounded shadow form-input ring-yellow-500"
+            rows={8}
+            placeholder="Piyush"
+          />
+        </label>
+      </form>
     </main>
   )
 }
