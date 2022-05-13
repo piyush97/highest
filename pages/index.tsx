@@ -25,8 +25,12 @@ const Home: NextPage = ({ posts }: Props) => {
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div className="overflow-hidden border rounded-lg cursor-pointer group">
               {/* Image */}
-              {/* <img src={urlFor(post.mainImage).url()} alt={post.title} /> */}
-              <div className="flex justify-between p-5 transition-transform duration-200 ease-in-out bg-white group-hover:scale-105">
+              <img
+                src={urlFor(post.mainImage).url()}
+                alt={post.title}
+                className="transition-transform duration-200 ease-in-out bg-white group-hover:scale-105"
+              />
+              <div className="flex justify-between p-5 transition-transform duration-200 ease-in-out group-hover:scale-105">
                 <div>
                   <p className="text-lg font-bold">{post.title}</p>
                   <p className="text-xs">
@@ -57,7 +61,7 @@ export const getServerSideProps = async () => {
           name,
           image},
         description,
-        mainimage,
+        mainImage,
         slug
         }
 `
