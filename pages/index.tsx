@@ -9,8 +9,7 @@ interface Props {
   posts: Post[]
 }
 
-const Home: NextPage = ({ posts }: Props) => {
-  console.log(posts)
+const Home: NextPage<Props> = ({ posts }) => {
   return (
     <div className="mx-auto max-w-7xl">
       <Head>
