@@ -39,7 +39,7 @@ const Post = ({ post }: Props) => {
       })
   }
   return (
-    <main>
+    <main className="mx-auto max-w-7xl">
       <Header />
       <img
         className="object-cover w-full h-40"
@@ -63,7 +63,7 @@ const Post = ({ post }: Props) => {
             Published at {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
-        <div className="mt-10">
+        <div className="max-w-sm mx-auto mt-10 text-justify sm:max-w-sm md:max-w-sm lg:max-w-6xl ">
           <PortableText
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT!}
